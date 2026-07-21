@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tashiq by Nandini | Jewellery & Sarees</title>
+<style>
+:root{--cream:#f8f3eb;--gold:#b88a3b;--black:#171717;--muted:#756d63;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--black)}
+a{text-decoration:none;color:inherit}.top{background:var(--black);color:#fff;text-align:center;padding:9px;font:12px Arial;letter-spacing:2px}
+nav{height:82px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid #eee;position:sticky;top:0;z-index:20}
+.logo{display:flex;align-items:center}.logo img{width:150px;height:58px;object-fit:cover;object-position:center;border-radius:4px}
+.links{display:flex;gap:28px;font:13px Arial;letter-spacing:1px;text-transform:uppercase}.icons{display:flex;gap:18px;font:22px Arial;cursor:pointer}
+.hero{min-height:570px;display:grid;grid-template-columns:1fr 1fr;background:linear-gradient(110deg,#eee5d7,#fff)}
+.hero-text{padding:90px 10%;display:flex;flex-direction:column;justify-content:center}.eyebrow{color:var(--gold);letter-spacing:4px;font:12px Arial;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(48px,6vw,82px);line-height:.95;font-weight:normal}.hero p{font:16px Arial;color:var(--muted);line-height:1.7;margin:25px 0;max-width:460px}
+.btn{display:inline-block;background:var(--black);color:#fff;padding:15px 28px;font:12px Arial;letter-spacing:2px;text-transform:uppercase;width:max-content;cursor:pointer;border:0}.hero-art{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,#fff 0,#e9dcc8 55%,#cbb795 100%);display:flex;align-items:center;justify-content:center}
+.hero-art:before{content:"";width:330px;height:430px;border-radius:48% 48% 10% 10%;background:linear-gradient(135deg,#fff,#d7c09a);box-shadow:20px 25px 60px #8d765455;transform:rotate(4deg)}
+.hero-art:after{content:"TASHIQ";position:absolute;font-size:80px;letter-spacing:8px;color:#b88a3b22;transform:rotate(-12deg)}
+section{padding:75px 6%}.section-head{text-align:center;margin-bottom:42px}.section-head h2{font-size:40px;font-weight:normal}.section-head p{font:14px Arial;color:var(--muted);margin-top:10px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.cat{height:300px;display:flex;align-items:end;padding:25px;background:linear-gradient(135deg,#d9c29b,#fff);position:relative;overflow:hidden}.cat:nth-child(2){background:linear-gradient(135deg,#e9d8c4,#fff)}.cat:nth-child(3){background:linear-gradient(135deg,#d2d0c9,#fff)}.cat h3{font-size:28px;font-weight:normal;z-index:2}.cat span{font:11px Arial;letter-spacing:2px;display:block;margin-top:7px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.product{background:#fff;position:relative}.pic{height:310px;background:linear-gradient(145deg,#eee5d8,#fff);display:flex;align-items:center;justify-content:center;font-size:80px;color:#b88a3b55}.product-info{padding:18px}.product-info h3{font-size:18px;font-weight:normal}.product-info p{font:13px Arial;color:var(--muted);margin:8px 0}.price{font:bold 14px Arial}.add{margin-top:14px;width:100%;padding:11px;background:transparent;border:1px solid #222;font:11px Arial;letter-spacing:1px;cursor:pointer}.badge{position:absolute;top:12px;left:12px;background:var(--black);color:#fff;padding:6px 9px;font:9px Arial;letter-spacing:1px}
+.banner{background:var(--black);color:#fff;text-align:center;padding:70px 20px}.banner h2{font-size:45px;font-weight:normal}.banner p{font:14px Arial;color:#ccc;margin:15px auto 25px}.banner .btn{background:#fff;color:#111}
+footer{background:#eee7dc;padding:55px 6% 25px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px}.footer-grid h3{font-size:22px;font-weight:normal;margin-bottom:16px}.footer-grid p,.footer-grid a{font:13px Arial;color:var(--muted);line-height:2;display:block}.copy{text-align:center;border-top:1px solid #d5ccbd;margin-top:35px;padding-top:20px;font:11px Arial;color:var(--muted)}
+.cart{position:fixed;right:-420px;top:0;width:400px;max-width:100%;height:100vh;background:#fff;z-index:50;padding:30px;box-shadow:-10px 0 30px #0002;transition:.3s}.cart.open{right:0}.cart h2{font-weight:normal}.close{float:right;cursor:pointer;font:24px Arial}.cart-items{margin-top:30px}.cart-item{padding:15px 0;border-bottom:1px solid #eee;font:14px Arial}.cart-total{margin-top:25px;font:bold 16px Arial}
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr}.hero-art{min-height:330px}.categories,.products{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.categories,.products{grid-template-columns:1fr}nav{padding:0 5%}.hero-text{padding:65px 8%}.section-head h2{font-size:32px}}
 
+.contact-buttons{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;flex-direction:column;gap:10px}
+.contact-btn{display:flex;align-items:center;gap:9px;padding:12px 17px;border-radius:30px;color:#fff;font:12px Arial;letter-spacing:.5px;box-shadow:0 5px 20px #0003;transition:.2s}
+.contact-btn:hover{transform:translateY(-2px)}
+.contact-btn span{font-size:19px;line-height:1}
+.whatsapp{background:#25D366}.email{background:#171717}
+</style>
+</head>
+<body>
+<div class="top">FREE SHIPPING ON ORDERS ABOVE ₹2,000 · SHOP THE NEW COLLECTION</div>
+<nav>
+  <a class="logo" href="#"><img src="IMG_5364(1).JPG" alt="Tashiq by Nandini Logo"></a>
+  <div class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#jewellery">Jewellery</a><a href="#sarees">Sarees</a><a href="#about">About</a></div>
+  <div class="icons"><span>⌕</span><span onclick="toggleCart()">🛍</span></div>
+</nav>
+
+<main id="home">
+<section class="hero">
+<div class="hero-text"><div class="eyebrow">The Art of Elegance</div><h1>Timeless.<br>Beautiful.<br>Yours.</h1><p>Discover a curated world of exquisite jewellery and graceful sarees, thoughtfully selected for the woman who celebrates her individuality.</p><a class="btn" href="#shop">Explore Collection</a></div>
+<div class="hero-art"></div>
+</section>
+
+<section id="about"><div class="section-head"><div class="eyebrow">Curated For You</div><h2>Shop By Category</h2><p>Pieces that tell your story, from everyday elegance to unforgettable occasions.</p></div>
+<div class="categories"><a class="cat" href="#jewellery"><h3>Jewellery<span>Explore Collection →</span></h3></a><a class="cat" href="#sarees"><h3>Sarees<span>Explore Collection →</span></h3></a><a class="cat" href="#shop"><h3>New Arrivals<span>Discover Now →</span></h3></a></div></section>
+
+<section id="shop"><div class="section-head"><div class="eyebrow">Our Favourites</div><h2>New Arrivals</h2><p>Handpicked styles designed to make every moment special.</p></div>
+<div class="products">
+<div class="product"><span class="badge">NEW</span><div class="pic">✦</div><div class="product-info"><h3>Golden Bloom Necklace</h3><p>Statement Jewellery</p><div class="price">₹2,499</div><button class="add" onclick="addToCart('Golden Bloom Necklace',2499)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">◈</div><div class="product-info"><h3>Temple Pearl Jhumka</h3><p>Traditional Jewellery</p><div class="price">₹1,899</div><button class="add" onclick="addToCart('Temple Pearl Jhumka',1899)">ADD TO BAG</button></div></div>
+<div class="product"><span class="badge">NEW</span><div class="pic">❈</div><div class="product-info"><h3>Rose Gold Choker</h3><p>Contemporary Jewellery</p><div class="price">₹3,299</div><button class="add" onclick="addToCart('Rose Gold Choker',3299)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">♢</div><div class="product-info"><h3>Ivory Silk Saree</h3><p>Handpicked Sarees</p><div class="price">₹4,999</div><button class="add" onclick="addToCart('Ivory Silk Saree',4999)">ADD TO BAG</button></div></div>
+</div></section>
+
+<section id="jewellery" style="background:#fff"><div class="section-head"><div class="eyebrow">Adorn Yourself</div><h2>Jewellery Edit</h2></div><div class="products">
+<div class="product"><div class="pic">✧</div><div class="product-info"><h3>Classic Gold Drops</h3><p>₹1,499</p><button class="add" onclick="addToCart('Classic Gold Drops',1499)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">❋</div><div class="product-info"><h3>Heritage Necklace</h3><p>₹5,999</p><button class="add" onclick="addToCart('Heritage Necklace',5999)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">✦</div><div class="product-info"><h3>Pearl Elegance</h3><p>₹2,199</p><button class="add" onclick="addToCart('Pearl Elegance',2199)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">◇</div><div class="product-info"><h3>Minimal Gold Ring</h3><p>₹999</p><button class="add" onclick="addToCart('Minimal Gold Ring',999)">ADD TO BAG</button></div></div>
+</div></section>
+
+<section id="sarees"><div class="section-head"><div class="eyebrow">Drape Your Story</div><h2>The Saree Collection</h2></div><div class="products">
+<div class="product"><div class="pic">🪷</div><div class="product-info"><h3>Pure Silk Saree</h3><p>₹6,999</p><button class="add" onclick="addToCart('Pure Silk Saree',6999)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">❁</div><div class="product-info"><h3>Organza Dream</h3><p>₹3,999</p><button class="add" onclick="addToCart('Organza Dream',3999)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">✿</div><div class="product-info"><h3>Handloom Grace</h3><p>₹4,499</p><button class="add" onclick="addToCart('Handloom Grace',4499)">ADD TO BAG</button></div></div>
+<div class="product"><div class="pic">❀</div><div class="product-info"><h3>Festive Gold Saree</h3><p>₹7,499</p><button class="add" onclick="addToCart('Festive Gold Saree',7499)">ADD TO BAG</button></div></div>
+</div></section>
+
+<div class="banner"><div class="eyebrow">Tashiq by Nandini</div><h2>Elegance, in every detail.</h2><p>Wear what makes you feel beautifully, unapologetically you.</p><a class="btn" href="#shop">Shop Now</a></div>
+</main>
+
+<footer><div class="footer-grid"><div><h3>Tashiq</h3><p>A curated destination for timeless jewellery and beautiful sarees.</p></div><div><h3>Shop</h3><a href="#jewellery">Jewellery</a><a href="#sarees">Sarees</a><a href="#shop">New Arrivals</a></div><div><h3>Help</h3><a href="#">Contact Us</a><a href="#">Shipping & Returns</a><a href="#">FAQs</a></div><div><h3>Follow</h3><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">WhatsApp</a></div></div><div class="copy">© 2026 Tashiq by Nandini. All rights reserved.</div></footer>
+
+
+<div class="contact-buttons">
+  <a class="contact-btn whatsapp" href="https://wa.me/919999999999" target="_blank" aria-label="Chat on WhatsApp">
+    <span>☏</span><b>WhatsApp</b>
+  </a>
+  <a class="contact-btn email" href="mailto:hello@tashiqbynandini.com" aria-label="Email Tashiq by Nandini">
+    <span>✉</span><b>Email Us</b>
+  </a>
+</div>
+
+<div class="cart" id="cart"><span class="close" onclick="toggleCart()">×</span><h2>Your Bag</h2><div class="cart-items" id="cartItems"><p style="font:14px Arial;color:#777;margin-top:25px">Your bag is empty.</p></div><div class="cart-total" id="cartTotal"></div><button class="btn" style="width:100%;margin-top:20px" onclick="checkout()">Proceed to Checkout</button></div>
+
+<script>
+let cart=[];
+function toggleCart(){document.getElementById('cart').classList.toggle('open')}
+function addToCart(name,price){cart.push({name,price});renderCart();document.getElementById('cart').classList.add('open')}
+function renderCart(){let el=document.getElementById('cartItems');if(!cart.length){el.innerHTML='<p style="font:14px Arial;color:#777;margin-top:25px">Your bag is empty.</p>';document.getElementById('cartTotal').innerHTML='';return}el.innerHTML=cart.map((x,i)=>`<div class="cart-item">${x.name}<span style="float:right">₹${x.price.toLocaleString('en-IN')} <b style="cursor:pointer" onclick="removeItem(${i})">×</b></span></div>`).join('');let total=cart.reduce((s,x)=>s+x.price,0);document.getElementById('cartTotal').innerHTML='Total: ₹'+total.toLocaleString('en-IN')}
+function removeItem(i){cart.splice(i,1);renderCart()}
+function checkout(){if(!cart.length){alert('Your bag is empty.');return}alert('Checkout demo: Connect this button to Razorpay/Stripe and your order backend.')}
+</script>
+</body>
+</html>
